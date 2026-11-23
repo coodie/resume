@@ -1,7 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
-# This should compile *.tex file to *.pdf
-
-input=$1
-name="${input%.*}"
-latex $input && dvips $name.dvi && ps2pdf $name.ps $name.pdf 
+# Compile *.tex file directly to *.pdf (defaults to resume.tex)
+pdflatex -interaction=nonstopmode "${1:-resume.tex}"

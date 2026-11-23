@@ -1,0 +1,123 @@
+% resume_compilers.tex
+% Tailored for Compiler Performance Engineer
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+%-----------------------------------------------------------
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Use built-in math/text symbols for list bullets
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{--}
+\renewcommand{\labelitemiii}{$\cdot$}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{6pt}\noindent{\large\textbf{#1}}\vspace{2pt}\hrule\vspace{4pt}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Przemys\l{}aw Le\'sniak} \\
+przemek.lesniak1@gmail.com \\
+\end{tabular*}
+\\
+
+\vspace{0.05in}
+
+\resheading{Work Experience}
+\begin{itemize}
+\item
+	\ressubheading{Google}{Warsaw, Poland}{Software Engineer -- Performance \& Scalability}{Oct. 2019 - Present}
+	\begin{itemize}
+		\resitem{\textbf{Borg Prime Scalability (Jul. 2023 - Present)} -- \textit{C++}}
+		\begin{itemize}
+			\resitem{Delivered incremental C++ performance optimizations that cumulatively reduced main-thread CPU utilization by $\sim$10 percentage points.}
+			\resitem{Owned team-wide performance regression tooling, including automated culprit search, an A/B benchmark comparison tool (\textit{abtest}), and a profile merger to reduce profiling noise.}
+			\resitem{Extended synthetic load-testing infrastructure simulating production traffic, introducing multiple samplers to reproduce realistic workload patterns.}
+			\resitem{Added production observability metrics and designed targeted subsystem tracing to analyze contention and evaluate RPC parallelization trade-offs.}
+		\end{itemize}
+		\resitem{\textbf{Earlier Google Cloud Teams (Oct. 2019 - Jul. 2023):} Built distributed backend and networking infrastructure in Go, Java, Cloud Spanner, and Terraform (\textit{Managed Envoy}, \textit{VM Manager Backend}).}
+		\resitem{\textbf{Mentorship \& Hiring:} Hosted interns on an experimental project and conducted 50+ technical interviews.}
+	\end{itemize}
+
+\item
+	\ressubheading{Saarland University}{Saarbrucken, Germany}{Student Programmer -- LLVM Backend}{Nov. 2017 - Mar. 2018}
+	\begin{itemize}
+		\resitem{Extended the LLVM x86 backend to support Intel MPX instructions for a research project inserting runtime memory-safety checks into compiled C code. \textit{(C++, LLVM)}}
+	\end{itemize}
+
+\item
+	\ressubheading{Google Summer of Code}{Remote}{Student Programmer -- LLVM Optimizer}{Jun. 2017 - Sep. 2017}
+	\begin{itemize}
+		\resitem{Improved LLVM auto-vectorization by adding IR metadata and fixing IR generation bugs, achieving up to 400\% speedup on common workloads. \textit{(C++, LLVM, Python)}}
+	\end{itemize}
+
+\item
+	\ressubheading{Nokia}{Wroc\l{}aw, Poland}{Compiler Developer}{Jul. 2016 - Mar. 2017}
+	\begin{itemize}
+		\resitem{Reduced runtime memory allocations in Nokia's TTCN-3 compiler runtime using an object-pool pattern, improving average execution performance by 20\%.}
+		\resitem{Introduced move semantics in the compiler to eliminate redundant copies, delivering an additional 5--10\% average performance gain. \textit{(C++, Python, Valgrind)}}
+	\end{itemize}
+
+\item
+	\ressubheading{Nokia}{Wroc\l{}aw, Poland}{Summer Intern -- Compiler Frontend}{Jul. 2015 - Sep. 2015}
+	\begin{itemize}
+		\resitem{Co-designed a Parsec-inspired parser combinator library in C++ and implemented a pushdown-automaton algorithm for real-time incremental re-parsing integrated into Qt Creator.}
+	\end{itemize}
+\end{itemize}
+
+\resheading{Selected Projects}
+\begin{itemize}
+\item
+	\ressubheading{C Compiler}{}{Compiler Construction Project}{}
+	\begin{itemize}
+		\resitem{Built a C-subset compiler in C++ with a hand-written parser, semantic analysis, LLVM IR code generation, and static constant propagation.}
+	\end{itemize}
+\item
+	\ressubheading{quant}{}{High-Performance Lossy Image Compression}{}
+	\begin{itemize}
+		\resitem{Implemented a vector-quantization image compressor in C++ ($\sim$80\% size reduction), optimizing throughput with cache-friendly data structures (small-vector optimization) and multithreading.}
+	\end{itemize}
+\item
+	\ressubheading{mimiker}{}{University of Wroc\l{}aw Operating System}{}
+	\begin{itemize}
+		\resitem{Implemented MIPS kernel subsystems in C: physical page allocator, page table management, TLB refill handler, mutexes, and system calls.}
+	\end{itemize}
+\end{itemize}
+
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheading{University of Wroc\l{}aw}{Wroc\l{}aw, Poland}{B.Sc. in Computer Science}{Mar. 2013 - Jun. 2019}
+	\begin{itemize}
+		\resitem{Bachelor thesis: \textit{Virtual Memory Subsystem for the Mimiker Operating System}. Erasmus exchange at Saarland University (Sep. 2017 - Mar. 2018).}
+	\end{itemize}
+\end{itemize}
+
+\end{document}

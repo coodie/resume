@@ -1,0 +1,11 @@
+# LaTeX build artifacts (keep *.pdf tracked)
+*.aux
+*.dvi
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.ps
+*.synctex.gz
+*.toc
+missfont.log
